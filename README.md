@@ -4,10 +4,10 @@ Test Shop app
 About
 -----
 
-Test Django application.
+Test Shop application.
 
 Author: Nikita Neverovich <neverrushs@gmail.com>
 
 Requirements:
 
-    Python 3.8, libraries in requirements.txt
+    Python 3.8, PostgreSQL
