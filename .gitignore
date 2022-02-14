@@ -2,6 +2,8 @@
 venv/
 .idea/
 
-pycache/
+media/
+
+__pycache__/
 *.py[cod]
 *$py.class
