@@ -16,16 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
-from nevershop.views import register
+from nevershop.views import register_view, logout_view, login_view
 from shop.views import product_list, product_details_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', register, name="register"),
     path(
         "product/<int:product_id>/", product_details_view, name="product_details_view"
     ),
-    path("products/", product_list, name="product_list"),
+    path("", product_list, name="product_list"),
+    path("register/", register_view, name="register"),
+    path("login/", login_view, name="login"),
+    path("logout/", logout_view, name="logout"),
 ]
 
 if settings.DEBUG:

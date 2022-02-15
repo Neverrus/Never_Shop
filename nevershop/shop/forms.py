@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
-from shop.models import ORDER_BY_CHOICES
+from shop.models import ORDER_BY_CHOICES, STATUS_CHOICES
 
 
 class ProductFiltersForm(forms.Form):
@@ -17,6 +17,10 @@ class ProductFiltersForm(forms.Form):
     )
     order_by = forms.ChoiceField(
         choices=ORDER_BY_CHOICES,
+        required=False
+    )
+    status = forms.ChoiceField(
+        choices=STATUS_CHOICES,
         required=False
     )
 
